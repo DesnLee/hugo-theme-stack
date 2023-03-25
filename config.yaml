@@ -1,56 +1,55 @@
-module:
-    hugoVersion:
-        extended: true
-        min: "0.87.0"
+module :
+  hugoVersion :
+    extended : true
+    min :      "0.87.0"
 
-params:
-    mainSections:
-        - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon:
+params :
+  mainSections :
+    - post
+  featuredImageField : image
+  rssFullContent :     true
+  favicon :            /favicon.ico?v=1.0
 
-    footer:
-        since:
-        customText:
+  footer :
+    since :      2020
+    customText : <a target="_blank" rel="noopener" href="http://beian.miit.gov.cn/">浙ICP备2021009729号-2</a>
 
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
+  dateFormat :
+    published :   Jan 02, 2006
+    lastUpdated : Jan 02, 2006 15:04 MST
 
-    sidebar:
-        compact: false
-        emoji:
-        subtitle:
-        avatar:
-            enabled: true
-            local: true
-            src: img/avatar.png
+  sidebar :
+    compact :  false
+    emoji :    🇨🇳
+    subtitle : 脆弱的人才会四处游说自己的不幸，坚强的人只会不动声色地愈渐强大。这里是 DesnLee 的前端博客，欢迎你的来访！
+    avatar :
+      enabled : true
+      local :   false
+      src :     https://cdn.desnlee.com/img/blog/avatar.jpg
 
-    article:
-        headingAnchor: false
-        math: false
-        toc: true
-        readingTime: true
-        license:
-            enabled: false
-            default: Licensed under CC BY-NC-SA 4.0
+  article :
+    math :        true
+    toc :         true
+    readingTime : true
+    license :
+      enabled : true
+      default : Licensed under CC BY-NC-SA 4.0
 
-    comments:
-        enabled: false
-        provider: disqus
+  comments :
+    enabled :  false
+    provider : disqus
 
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
+    disqusjs :
+      shortname :
+      apiUrl :
+      apiKey :
+      admin :
+      adminLabel :
 
-        utterances:
-            repo:
-            issueTerm: pathname
-            label:
+    utterances :
+      repo :
+      issueTerm : pathname
+      label :
 
         beaudar:
             repo:
@@ -63,87 +62,127 @@ params:
             site:
             locale:
 
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
+    vssue :
+      platform :
+      owner :
+      repo :
+      clientId :
+      clientSecret :
+      autoCreateIssue : false
 
-        # Waline client configuration see: https://waline.js.org/en/reference/client/props.html
-        waline:
-            serverURL:
-            lang:
-            visitor:
-            avatar:
-            emoji:
-                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
-            requiredMeta:
-                - nick
-                - mail
-            locale:
-                admin: Admin
-                placeholder:
+    # Waline client configuration see: https://waline.js.org/en/reference/client.html
+    waline :
+      serverURL :
+      lang :
+      visitor :
+      avatar :
+      emoji :
+        - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+      requiredMeta :
+        - name
+        - email
+        - url
+      placeholder :
+      locale :
+        admin : Admin
 
-        twikoo:
-            envId:
-            region:
-            path:
-            lang:
+    twikoo :
+      envId :
+      region :
+      path :
+      lang :
 
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            strict:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-            inputPosition:
-            lang:
+    giscus :
+      repo :
+      repoID :
+      category :
+      categoryID :
+      mapping :
+      strict :
+      lightTheme :
+      darkTheme :
+      reactionsEnabled : 1
+      emitMetadata :     0
+      inputPosition :
+      lang :
 
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
+    gitalk :
+      owner :
+      admin :
+      repo :
+      clientID :
+      clientSecret :
 
-        cusdis:
-            host:
-            id:
+    cusdis :
+      host :
+      id :
 
-    widgets:
-        homepage: []
-        page: []
+  widgets :
+    homepage :
+      - type : search
+      - type : archives
+        params :
+          limit : 10
+      - type : tag-cloud
+        params :
+          limit : 10
+    page :
+      - type : toc
 
-    opengraph:
-        twitter:
-            # Your Twitter username
-            site:
+  opengraph :
+    twitter :
+      # Your Twitter username
+      site : DesnLee
 
-            # Available values: summary, summary_large_image
-            card: summary_large_image
+      # Available values: summary, summary_large_image
+      card : summary_large_image
 
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
+  defaultImage :
+    opengraph :
+      enabled : true
+      local :   false
+      src :     https://cdn.desnlee.com/img/blog/opengraph.jpg
 
-    colorScheme:
-        # Display toggle
-        toggle: true
+  colorScheme :
+    # Display toggle
+    toggle :  true
 
-        # Available values: auto, light, dark
-        default: auto
+    # Available values: auto, light, dark
+    default : auto
 
-    imageProcessing:
-        cover:
-            enabled: true
-        content:
-            enabled: true
+  imageProcessing :
+    cover :
+      enabled : true
+    content :
+      enabled : true
+
+menu :
+  main :
+    - identifier : home
+      name :       Home
+      url :        /
+      weight :     -100
+      params :
+        icon : home
+
+    - identifier : categories
+      name :       Categories
+      url :        /categories
+      weight :     -90
+      params :
+        icon : categories
+
+  social :
+    - identifier : github
+      name :       Github
+      url :        https://github.com/DesnLee
+      weight :     -100
+      params :
+        icon : github
+
+    - identifier : rss
+      name :       RSS
+      url :        http://localhost:1313/post/index.xml
+      weight :     -100
+      params :
+        icon : rss
