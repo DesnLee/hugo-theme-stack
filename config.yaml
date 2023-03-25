@@ -182,7 +182,7 @@ menu :
 
     - identifier : rss
       name :       RSS
-      url :        http://localhost:1313/post/index.xml
+      url :        /post/index.xml
       weight :     -100
       params :
         icon : rss
